@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class ProductSets(models.Model):
     """Набор продуктов"""
-    code = models.CharField(max_length=64)
+    title = models.CharField(max_length=64)
     description = models.CharField(max_length=512)
 
 

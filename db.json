@@ -1,0 +1,452 @@
+[
+{
+  "model": "repository.productsets",
+  "pk": 1,
+  "fields": {
+    "title": "Семейная промо-коробка",
+    "description": "Набор продуктов на каждый день. Если надоело думать над составом заказа, или вы у нас первый раз — это отличный выбор. Из этих продуктов можно приготовить больше 10 блюд на завтрак, обед или ужин. Сорта продуктов могут меняться, в зависимости от наличия товаров."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 2,
+  "fields": {
+    "title": "Фруктовая промо-коробка",
+    "description": "Лучший вариант для первого заказа - коробка-сюрприз. В составе один крупный фрукт, несколько видов сезонных и экзотических фруктов, а также сухофрукты либо сладости."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 3,
+  "fields": {
+    "title": "Лето",
+    "description": "Коробка с 5 сезонными новинками. Спелые фрукты, ягоды и кукуруза для летнего настроения."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 4,
+  "fields": {
+    "title": "Дачник",
+    "description": "Ваш огородный урожай в одной коробке."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 5,
+  "fields": {
+    "title": "Гриль",
+    "description": "Набор овощей для гриля, удобной взять с собой."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 6,
+  "fields": {
+    "title": "Давай окрошку",
+    "description": "Свежие овощи и зелень для самого популярного летнего супа. Добавляйте любимый напиток и натуральную колбасу. Наслаждайтесь."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 7,
+  "fields": {
+    "title": "ЗОЖник",
+    "description": "Вкусно и полезно."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 8,
+  "fields": {
+    "title": "Впрок",
+    "description": "Продукты первой необходимости, которые долго хранятся. Можно купить и положить про запас или отвезти на дачу. На любой случай у вас всегда будет еда."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 9,
+  "fields": {
+    "title": "Паста с овощами",
+    "description": "Быстрый, сытный и полезный обед или ужин. Качественные спагетти, приправленные томатным соусом и овощами, не оставят вас равнодушными. В коробке прилагается рецепт, чтобы у вас точно все получилось ;)"
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 10,
+  "fields": {
+    "title": "Завтрак в кайф",
+    "description": "Набор продуктов для ленивого полезного завтрака"
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 11,
+  "fields": {
+    "title": "Белочка",
+    "description": "Сырые орешки на любой вкус."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 12,
+  "fields": {
+    "title": "Экзотика",
+    "description": "Только экзотические фрукты."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 13,
+  "fields": {
+    "title": "Счастье есть",
+    "description": "Микс фруктов: 4 вида сезонных фруктов и 3 вида экзотики."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 14,
+  "fields": {
+    "title": "Коробка для Евы",
+    "description": "Долгожданное ассорти яблок на любой вкус."
+  }
+},
+{
+  "model": "repository.productsets",
+  "pk": 15,
+  "fields": {
+    "title": "Мама, я на спорте",
+    "description": "Кубики на животе начинают расти сразу после оформления заказа."
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 1,
+  "fields": {
+    "surname": "Иванов",
+    "name": "Иван",
+    "patronymic": "Иванович",
+    "phone_number": "8-999-777-66-00",
+    "delivery_address": "ул. Хрустальная, 21, кв 27"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 2,
+  "fields": {
+    "surname": "Малейкина",
+    "name": "Лолита",
+    "patronymic": "Петровна",
+    "phone_number": "8-919-457-36-60",
+    "delivery_address": "ул. Ладожская, 15, кв 277"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 3,
+  "fields": {
+    "surname": "Игахина",
+    "name": "Елизавета",
+    "patronymic": "Сидоровна",
+    "phone_number": "8-949-634-26-41",
+    "delivery_address": "ул. Ладожская, 15, кв 277"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 4,
+  "fields": {
+    "surname": "Васильев",
+    "name": "Петр",
+    "patronymic": "Игнатович",
+    "phone_number": "8-921-644-16-43",
+    "delivery_address": "ул. Лейкина, 35, кв 174"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 5,
+  "fields": {
+    "surname": "Логенков",
+    "name": "Александр",
+    "patronymic": "Иванович",
+    "phone_number": "8-921-614-46-43",
+    "delivery_address": "Советский пр, 14, кв 544"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 6,
+  "fields": {
+    "surname": "Сафинова",
+    "name": "Марина",
+    "patronymic": "Андреевна",
+    "phone_number": "8-916-144-66-23",
+    "delivery_address": "ул. Красная, 2, кв 44"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 7,
+  "fields": {
+    "surname": "Махина",
+    "name": "Мария",
+    "patronymic": "Евгеньевна",
+    "phone_number": "8-916-124-46-22",
+    "delivery_address": "ул. Ленина, 32, кв 34"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 8,
+  "fields": {
+    "surname": "Пупыркин",
+    "name": "Илья",
+    "patronymic": "Федорович",
+    "phone_number": "8-926-204-06-22",
+    "delivery_address": "ул. Победы, 31, кв 24"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 9,
+  "fields": {
+    "surname": "Лобко",
+    "name": "Софья",
+    "patronymic": "Михайловна",
+    "phone_number": "8-932-264-76-02",
+    "delivery_address": "ул. Правды, 71, кв 264"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 10,
+  "fields": {
+    "surname": "Перцев",
+    "name": "Сергей",
+    "patronymic": "Сергеевич",
+    "phone_number": "8-921-264-46-72",
+    "delivery_address": "Енохин пр, 1, кв 64"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 11,
+  "fields": {
+    "surname": "Зайцева",
+    "name": "Алиса",
+    "patronymic": "Юрьевна",
+    "phone_number": "8-911-764-86-22",
+    "delivery_address": "ул. Солнцева, 21, кв 644"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 12,
+  "fields": {
+    "surname": "Клеточкин",
+    "name": "Сергей",
+    "patronymic": "Витальевич",
+    "phone_number": "8-923-344-96-42",
+    "delivery_address": "ул. Прокопенко, 61, кв 361"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 13,
+  "fields": {
+    "surname": "Пузина",
+    "name": "Алена",
+    "patronymic": "Сергеевна",
+    "phone_number": "8-921-664-16-29",
+    "delivery_address": "Легендарный пр, 16, кв 324"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 14,
+  "fields": {
+    "surname": "Лихой",
+    "name": "Антон",
+    "patronymic": "Игоревич",
+    "phone_number": "8-923-224-06-02",
+    "delivery_address": "Лисий пр, 43, кв 664"
+  }
+},
+{
+  "model": "repository.recipient",
+  "pk": 15,
+  "fields": {
+    "surname": "Краухина",
+    "name": "Анна",
+    "patronymic": "Вадимовна",
+    "phone_number": "8-911-294-86-12",
+    "delivery_address": "ул. Петровых, 23, кв 73"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 1,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.358Z",
+    "delivery_datetime": "2020-09-12T17:50:25.358Z",
+    "recipient": 1,
+    "product_set": 13,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 2,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.448Z",
+    "delivery_datetime": "2020-09-12T17:50:25.448Z",
+    "recipient": 2,
+    "product_set": 5,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 3,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.532Z",
+    "delivery_datetime": "2020-09-12T17:50:25.531Z",
+    "recipient": 3,
+    "product_set": 10,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 4,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.598Z",
+    "delivery_datetime": "2020-09-12T17:50:25.598Z",
+    "recipient": 4,
+    "product_set": 12,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 5,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.665Z",
+    "delivery_datetime": "2020-09-12T17:50:25.664Z",
+    "recipient": 5,
+    "product_set": 11,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 6,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.732Z",
+    "delivery_datetime": "2020-09-12T17:50:25.731Z",
+    "recipient": 6,
+    "product_set": 14,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 7,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.798Z",
+    "delivery_datetime": "2020-09-12T17:50:25.798Z",
+    "recipient": 7,
+    "product_set": 2,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 8,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.865Z",
+    "delivery_datetime": "2020-09-12T17:50:25.864Z",
+    "recipient": 8,
+    "product_set": 2,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 9,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:25.932Z",
+    "delivery_datetime": "2020-09-12T17:50:25.931Z",
+    "recipient": 9,
+    "product_set": 9,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 10,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.015Z",
+    "delivery_datetime": "2020-09-12T17:50:26.015Z",
+    "recipient": 10,
+    "product_set": 4,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 11,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.098Z",
+    "delivery_datetime": "2020-09-12T17:50:26.098Z",
+    "recipient": 11,
+    "product_set": 4,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 12,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.173Z",
+    "delivery_datetime": "2020-09-12T17:50:26.173Z",
+    "recipient": 12,
+    "product_set": 12,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 13,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.265Z",
+    "delivery_datetime": "2020-09-12T17:50:26.264Z",
+    "recipient": 13,
+    "product_set": 7,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 14,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.348Z",
+    "delivery_datetime": "2020-09-12T17:50:26.348Z",
+    "recipient": 14,
+    "product_set": 3,
+    "status": "Created"
+  }
+},
+{
+  "model": "repository.order",
+  "pk": 15,
+  "fields": {
+    "order_created_datetime": "2020-09-12T16:50:26.448Z",
+    "delivery_datetime": "2020-09-12T17:50:26.447Z",
+    "recipient": 15,
+    "product_set": 10,
+    "status": "Created"
+  }
+}
+]

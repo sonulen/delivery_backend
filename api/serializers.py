@@ -71,3 +71,12 @@ class OrderSerializer(ModelSerializer):
                 code=400)
 
         return delivery_datetime
+
+
+class OrderStatusSerializer(ModelSerializer):
+    class Meta:
+        model = Order
+        fields = [
+            'id',
+            'status',
+        ]

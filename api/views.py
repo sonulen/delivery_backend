@@ -1,6 +1,7 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import ReadOnlyModelViewSet, ModelViewSet
 
@@ -26,14 +27,18 @@ class OrdersViewSet(ModelViewSet):
         'status': ['exact']
     }
 
-    def update(self, request, pk=None):
-        return Response(status=status.HTTP_403_FORBIDDEN)
+    __superuser_only_actions = ['update', 'partial_update', 'destroy']
 
-    def partial_update(self, request, pk=None):
-        return Response(status=status.HTTP_403_FORBIDDEN)
+    def get_permissions(self):
+        """
+        Instantiates and returns the list of permissions that this view requires.
+        """
+        if self.action in self.__superuser_only_actions:
+            permission_classes = [IsAdminUser]
+        else:
+            permission_classes = [AllowAny]
 
-    def destroy(self, request, pk=None, *args, **kwargs):
-        return Response(status=status.HTTP_403_FORBIDDEN)
+        return [permission() for permission in permission_classes]
 
     @action(detail=True, methods=['patch'], name='Change Status')
     def status(self, request, pk=None):
@@ -56,10 +61,19 @@ class RecipientViewSet(ModelViewSet):
     queryset = Recipient.objects.all()
     serializer_class = RecipientSerializer
 
-    __forbidden_fields = ['name', 'surname', 'patronymic', 'delivery_address']
+    __forbidden_fields = ['id', 'name', 'surname', 'patronymic', 'delivery_address']
+    __superuser_only_actions = ['update', 'destroy']
+
+    def get_permissions(self):
+        if self.action in self.__superuser_only_actions:
+            permission_classes = [IsAdminUser]
+        else:
+            permission_classes = [AllowAny]
+
+        return [permission() for permission in permission_classes]
 
     def partial_update(self, request, *args, **kwargs):
-        if self.__is_valid_request(request):
+        if not self.__is_valid_request(request):
             return Response(
                 {'error': 'It is forbidden to update the passed fields'},
                 status=status.HTTP_403_FORBIDDEN)
@@ -73,17 +87,11 @@ class RecipientViewSet(ModelViewSet):
 
         return Response(serializer.data)
 
-    def update(self, request, *args, **kwargs):
-        return Response(status=status.HTTP_403_FORBIDDEN)
-
-    def destroy(self, request, pk=None, *args, **kwargs):
-        return Response(status=status.HTTP_403_FORBIDDEN)
-
     def __is_valid_request(self, request):
         for field in request.data.keys():
             if field in self.__forbidden_fields:
-                return True
-        return False
+                return False
+        return True
 
     @action(methods=['patch'], detail=True, name='Change full name')
     def full_name(self, request, pk=None):

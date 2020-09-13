@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'repository',
     'api',
+    'django_filters',
     'rest_framework',
 ]
 
@@ -88,6 +89,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Pagination
 REST_FRAMEWORK = {
+    "DATE_INPUT_FORMATS": ["%d-%m-%YT%H:%M"],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
 }

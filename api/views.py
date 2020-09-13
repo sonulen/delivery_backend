@@ -1,3 +1,4 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -15,6 +16,20 @@ class ProductSetsViewSet(ReadOnlyModelViewSet):
 class OrdersViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    # Фильтр сделан на основе: https://stackoverflow.com/questions/58837940/django-rest-framework-filter-by-date-range
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = {
+        'id': ['exact'],
+        'delivery_datetime': ['gte', 'lte', 'exact', 'gt', 'lt'],
+        'order_created_datetime': ['gte', 'lte', 'exact', 'gt', 'lt'],
+        'status': ['exact']
+    }
+
+    def update(self, request, pk=None):
+        return Response(status=status.HTTP_403_FORBIDDEN)
+
+    def partial_update(self, request, pk=None):
+        return Response(status=status.HTTP_403_FORBIDDEN)
 
     def destroy(self, request, pk=None, *args, **kwargs):
         return Response(status=status.HTTP_403_FORBIDDEN)

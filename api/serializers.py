@@ -38,21 +38,32 @@ class RecipientSerializer(ModelSerializer):
             return number
 
     def validate(self, attrs):
-        detail = None
+        from api.utils import validate_name
+        return validate_name(attrs)
 
-        if attrs['name'] == attrs['surname']:
-            detail = "Name and surname must be different"
-        if attrs['name'] == attrs['patronymic']:
-            detail = "Name and patronymic must be different"
-        if attrs['surname'] == attrs['patronymic']:
-            detail = "Surname and patronymic must be different"
 
-        if detail:
-            raise ValidationError(
-                detail=detail,
-                code=400)
+class RecipientDeliveryAddressSerializer(ModelSerializer):
+    class Meta:
+        model = Recipient
+        fields = [
+            'id',
+            'delivery_address',
+        ]
 
-        return attrs
+
+class RecipientFullNameSerializer(ModelSerializer):
+    class Meta:
+        model = Recipient
+        fields = [
+            'id',
+            'surname',
+            'name',
+            'patronymic',
+        ]
+
+    def validate(self, attrs):
+        from api.utils import validate_name
+        return validate_name(attrs)
 
 
 class OrderSerializer(ModelSerializer):
